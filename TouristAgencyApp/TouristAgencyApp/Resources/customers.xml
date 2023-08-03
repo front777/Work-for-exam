@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Customers>
+	<Customer>
+		<CustomerID></CustomerID>
+		<Name></Name>
+		<ContactDetails></ContactDetails>
+		<Price></Price>
+		<Address></Address>
+		<PaymentInformation></PaymentInformation>
+		<BookingHistory>
+			<Booking>
+				<BookingID></BookingID>
+				<CustomerID></CustomerID>
+				
+			</Booking>
+		</BookingHistory>
+	</Customer>
+	<Customer>
+		<CustomerID></CustomerID>
+		<Name></Name>
+		<ContactDetails></ContactDetails>
+		<Address></Address>
+		<PaymentInformation></PaymentInformation>
+		<Price></Price>
+
+		<BookingHistory>
+			<Booking>
+				<BookingID></BookingID>
+				<CustomerID></CustomerID>
+				
+				<Status></Status>
+			</Booking>
+		</BookingHistory>
+	</Customer>
+
+
+	<Customer>
+		<CustomerID></CustomerID>
+		<Name></Name>
+		<ContactDetails></ContactDetails>
+		<Address></Address>
+		<PaymentInformation></PaymentInformation>
+
+		<Price></Price>
+		<BookingHistory>
+			<Booking>
+				<BookingID></BookingID>
+				<CustomerID></CustomerID>
+				
+				<Status></Status>
+			</Booking>
+		</BookingHistory>
+	</Customer>
+	</Customers>

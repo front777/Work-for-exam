@@ -1,0 +1,77 @@
+/* private void buttonAddCustomer_Click(object sender, EventArgs e)
+         {
+             // Создание нового экземпляра формы для добавления клиента
+
+             var addCustomerForm = new addCustomerForm();
+             addCustomerForm.Show();
+
+             if (addCustomerForm.ShowDialog() == DialogResult.OK)
+             {
+                 // Получение новых данных о клиенте из формы
+                 Customer newCustomer = addCustomerForm.GetCustomer();
+
+                 // Генерация уникального идентификатора для клиента (может быть реализовано по-другому)
+                 int newCustomerId = customers.Count + 1;
+                 newCustomer.CustomerID = newCustomerId;
+
+                 // Добавление нового клиента в список и обновление ListBox
+                 customers.Add(newCustomer);
+                 PopulateListBox();
+
+                 // Сохранение данных в XML-файл
+                 SaveCustomersToXml();
+             }
+         }
+         private void buttonDeleteCustomer_Click(object sender, EventArgs e)
+         {
+             if (customerListBox.SelectedItem != null)
+             {
+                 int selectedIndex = customerListBox.SelectedIndex;
+
+                 // Удаление клиента из списка и обновление ListBox
+                 customers.RemoveAt(selectedIndex);
+                 PopulateListBox();
+
+                 // Сохранение данных в XML-файл
+                 SaveCustomersToXml();
+             }
+         }
+
+
+
+     private void SaveCustomersToXml()
+         {
+             XElement customersElement = new XElement("Customers");
+
+             foreach (Customer customer in customers)
+             {
+                 XElement customerElement = new XElement("Customer",
+                     new XElement("CustomerID", customer.CustomerID),
+                     new XElement("Name", customer.Name),
+                     new XElement("ContactDetails", customer.ContactDetails),
+
+                     new XElement("PaymentInformation", customer.PaymentInformation)
+                 );
+
+                 XElement bookingHistoryElement = new XElement("BookingHistory");
+
+                 foreach (Booking booking in customer.BookingHistory)
+                 {
+                     XElement bookingElement = new XElement("Booking",
+                         new XElement("BookingID", booking.BookingID),
+                         new XElement("CustomerID", booking.CustomerID),
+
+                         new XElement("Price", booking.Price),
+                         new XElement("Status", booking.Status)
+                     );
+
+                     bookingHistoryElement.Add(bookingElement);
+                 }
+
+                 customerElement.Add(bookingHistoryElement);
+                 customersElement.Add(customerElement);
+             }
+
+             XDocument doc = new XDocument(customersElement);
+             doc.Save(xmlFilePath);
+         }*/

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+  <Customer>
+    <CustomerID>7</CustomerID>
+    <Name>george</Name>
+    <ContactDetails>+3544235435</ContactDetails>
+    <PaymentInformation>Svanetia</PaymentInformation>
+    <BookingHistory />
+  </Customer>
+</Customers>
